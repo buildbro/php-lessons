@@ -1,0 +1,1 @@
+http://localhost/php-lessons/data.php?fName=Pius+Aboyi&email=apeapius%40gmail.com&password=1234546&password2=1234355

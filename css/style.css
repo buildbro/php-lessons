@@ -1,0 +1,35 @@
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+label {
+    display: block;
+    margin-bottom: 4px;
+}
+.form-container {
+    max-width: 400px;
+    background: #EEEEEE;
+    margin: 0 auto;
+    padding: 32px;
+    border-radius: 8px;
+}
+input {
+    width: 100%;
+}
+input[type=text], input[type=password] {
+    border: 1px solid #DDDDDD;
+    border-radius: 3px;
+    padding: 8px 4px;
+}
+input[type=submit] {
+    background: aqua;
+    padding: 8px;
+    border: 1px solid #AAAAFF;
+    border-radius: 3px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
