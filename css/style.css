@@ -33,3 +33,11 @@ input[type=submit] {
 .form-group {
     margin-bottom: 16px;
 }
+
+.chat-box textarea {
+    border: 1px solid #DDDDDD;
+    border-radius: 3px;
+    padding: 8px 4px;
+    width: 100%;
+    margin-bottom: 16px;
+}

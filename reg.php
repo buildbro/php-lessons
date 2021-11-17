@@ -1,16 +1,18 @@
 <?php
-include "config.php";
+if (!empty($_POST['email'])) {
+    include "config.php";
 
-$fullName = $_POST['fName'];
-$email = $_POST['email'];
-$password = $_POST['password'];
-$password2 = $_POST['password2'];
+    $fullName = $_POST['fName'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $password2 = $_POST['password2'];
 
-$query = $mysqli->query("INSERT INTO users(email, password, photo, gender) VALUES('$email', '$password', '', '')");
-if ($query) {
-    echo "<p>Registration Successful!</p>";
-} else {
-    echo "<p>Another user is already using the email: <em>$email</em></p>";
+    $query = $mysqli->query("INSERT INTO users(email, password, photo, gender) VALUES('$email', '$password', '', '')");
+    if ($query) {
+        echo "<p>Registration Successful!</p>";
+    } else {
+        echo "<p>Another user is already using the email: <em>$email</em></p>";
+    }
 }
 
 ?>
