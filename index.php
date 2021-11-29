@@ -17,9 +17,10 @@ if (!empty($_POST['message'])) {
 <html>
 <head>
     <title>Simple Chat - Home</title>
-    <link href="css/style.css?v=1" rel="stylesheet" type="text/css">
+    <link href="css/style.css?v=12" rel="stylesheet" type="text/css">
 </head>
 <body>
+<?php include "nav.php"; ?>
 <div class="container">
     <?php
     if (isset($_SESSION['username'])) {
@@ -28,14 +29,30 @@ if (!empty($_POST['message'])) {
         ?>
         <div class="chat-box">
             <div class="messages">
-                <?php
-                $chatsQuery = $mysqli->query("SELECT * FROM messages");
-                while ($rows = $chatsQuery->fetch_assoc()) {
-                    $chatMessage = $rows['message'];
-                    $chatSender = $rows['sender'];
-                    echo "<p><strong>$chatSender:</strong> $chatMessage</p>";
-                }
-                ?>
+                <table class="chat-table">
+                    <thead>
+                    <td>Sender</td>
+                    <td>Message</td>
+                    <td>Sent At</td>
+                    </thead>
+                    <tbody>
+                    <?php
+                    $chatsQuery = $mysqli->query("SELECT * FROM messages");
+                    while ($rows = $chatsQuery->fetch_assoc()) {
+                        $chatMessage = $rows['message'];
+                        $chatSender = $rows['sender'];
+                        ?>
+                        <tr>
+                            <td><?php echo $rows['sender']; ?></td>
+                            <td><?php echo $rows['message']; ?></td>
+                            <td><?php echo $rows['sent_at']; ?></td>
+                        </tr>
+                    <?php
+                    }
+                    ?>
+                    </tbody>
+                </table>
+
             </div>
             <a href="index.php">Refresh</a>
             <form action="" method="post">

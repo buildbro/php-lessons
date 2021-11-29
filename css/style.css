@@ -8,6 +8,30 @@ label {
     display: block;
     margin-bottom: 4px;
 }
+
+/* this is style for the nav-bar */
+.nav-bar {
+    background-color: white;
+    border-bottom: 1px #DCDCDC solid;
+    padding: 20px 0;
+}
+.nav-bar ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: end;
+    margin: 0;
+    padding: 0;
+}
+.nav-bar ul li {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+a  {
+    text-decoration: none;
+}
+
 .form-container {
     max-width: 400px;
     background: #EEEEEE;
@@ -40,4 +64,20 @@ input[type=submit] {
     padding: 8px 4px;
     width: 100%;
     margin-bottom: 16px;
+}
+
+table.chat-table {
+    width: 100%;
+}
+table.chat-table thead {
+    background-color: #DEDEDE;
+}
+table.chat-table thead td {
+    padding: 16px;
+}
+table.chat-table tbody tr {
+    background-color: #EFEFEF;
+}
+table.chat-table tbody td {
+    padding: 8px 16px;
 }
